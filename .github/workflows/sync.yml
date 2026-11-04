@@ -1,0 +1,70 @@
+# 쌤서랍: 공용 예약판에 새 버전이 올라오면 GitHub 릴리스로 자동으로 올려요 (한 시간마다 확인)
+name: 쌤서랍 새 버전 자동 올리기
+on:
+  schedule:
+    - cron: "23 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 공용 예약판 확인 → 새 버전이면 릴리스
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cat > /tmp/sync.py <<'PY'
+          import os, sys, json, re, base64, hashlib, zipfile, io, subprocess, urllib.request, urllib.parse
+          BOARD = "https://script.google.com/macros/s/AKfycbz9wgjk9373cepTz8qntxMT1t5R1J7wLtKaGTLl3UwIdggHNhoc9hjDSplI7Z03Q9sJ/exec"
+          KEY = "kt-1d68980e820eea1f59c7c5a7"   # 위젯에 들어 있는 공용 열쇠 (배포 열쇠 아님)
+          REPO = os.environ["GITHUB_REPOSITORY"]
+          def board(**q):
+              q.update(key=KEY, v="github")
+              req = urllib.request.Request(BOARD + "?" + urllib.parse.urlencode(q), headers={"User-Agent": "ssamseorap-sync"})
+              with urllib.request.urlopen(req, timeout=120) as r:
+                  return json.loads(r.read().decode("utf-8", "replace"))
+          def vt(v):
+              return tuple(int(x) for x in v.split("."))
+          d = board(act="ver")
+          ver = str(d.get("ver") or "")
+          if not (d.get("ok") and re.fullmatch(r"\d+(?:\.\d+)*", ver) and d.get("zip") and d.get("sha1")):
+              print("예약판에 받을 버전이 없어요"); sys.exit(0)
+          r = subprocess.run(["gh", "release", "view", "--repo", REPO, "--json", "tagName", "-q", ".tagName"], capture_output=True, text=True)
+          tag = r.stdout.strip() if r.returncode == 0 else ""
+          print("예약판", ver, "/ GitHub", tag or "(없음)")
+          if re.fullmatch(r"v\d+(?:\.\d+)*", tag) and vt(tag[1:]) >= vt(ver):
+              print("이미 최신이에요"); sys.exit(0)
+          n, buf, i = max(1, int(d.get("n") or 1)), bytearray(), 0
+          while i < n:
+              p = board(act="zip", i=i)
+              if not p.get("ok") or str(p.get("ver")) != ver:
+                  sys.exit("받는 중에 버전이 바뀌었어요. 다음 시간에 다시 해요.")
+              buf += base64.b64decode(p.get("b64") or "")
+              n = max(n, int(p.get("n") or n)); i += 1
+          b = bytes(buf)
+          if d.get("size") and len(b) != int(d["size"]): sys.exit("크기가 달라요")
+          if hashlib.sha1(b).hexdigest() != str(d["sha1"]).lower(): sys.exit("파일이 깨졌어요 (sha1)")
+          z = zipfile.ZipFile(io.BytesIO(b))
+          if 'VERSION = "%s"' % ver not in z.read("교사위젯/교사위젯.pyw").decode("utf-8"): sys.exit("zip 안 버전이 달라요")
+          for nm in z.namelist():
+              if re.search(rb"kt-adm-[0-9a-f]{16,40}", z.read(nm)): sys.exit("zip에 배포 열쇠가 들어 있어서 올리지 않아요: " + nm)
+          info = {"ver": ver, "note": str(d.get("note") or "")[:400], "size": len(b), "sha1": hashlib.sha1(b).hexdigest(),
+                  "sha256": hashlib.sha256(b).hexdigest(),
+                  "url": "https://github.com/%s/releases/download/v%s/ssamseorap.zip" % (REPO, ver),
+                  "page": "https://claude.ai/artifact/GocNTKe6rx4ymZqYGpGX8a"}
+          open("ssamseorap.zip", "wb").write(b)
+          json.dump(info, open("latest.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+          notes = ("## 쌤서랍 %s\n\n%s\n\n이 zip은 쓰고 있는 위젯의 업데이트용이에요. 위젯이 알아서 받아요.\n"
+                   "처음 설치는 공유 페이지에서 받아 주세요: %s" % (ver, info["note"], info["page"]))
+          subprocess.run(["gh", "release", "create", "v" + ver, "ssamseorap.zip", "latest.json", "--repo", REPO,
+                          "--title", "쌤서랍 " + ver, "--notes", notes, "--latest"], check=True)
+          print("올렸어요: v" + ver)
+          PY
+          python3 /tmp/sync.py
+          if [ -f latest.json ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add latest.json && git commit -m "latest.json: $(python3 -c 'import json;print(json.load(open("latest.json"))["ver"])')" && git push || true
+          fi
