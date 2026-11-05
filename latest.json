@@ -1,9 +1,9 @@
 {
- "ver": "6.1.16",
- "note": "세특 분석을 깔끔하게 (탭 · 네 영역 · 거미줄 그림)",
- "size": 4222756,
- "sha1": "88949e0ca57f9f207300de0af67fd196df26fc01",
- "sha256": "1290a3e9cb9c2519ed47f37fad32d52770a494fcab12c879f4537dfb88155d51",
- "url": "https://github.com/kkaltoe-ssam/ssamseorap/releases/download/v6.1.16/ssamseorap.zip",
+ "ver": "6.3.1",
+ "note": "생기부 PDF 바로 넣기 · 나이스에서 파일 받는 법",
+ "size": 4870302,
+ "sha1": "bdc4b1d37956f45f2b9228cb1c547d42a4c6f658",
+ "sha256": "1071d62881f2df2bcb1af1e1b8d2b9da4929355f9b98e9ef4cf66fcc2e290486",
+ "url": "https://github.com/kkaltoe-ssam/ssamseorap/releases/download/v6.3.1/ssamseorap.zip",
  "page": "https://claude.ai/artifact/GocNTKe6rx4ymZqYGpGX8a"
 }
