@@ -1,9 +1,9 @@
 {
- "ver": "6.3.1",
- "note": "생기부 PDF 바로 넣기 · 나이스에서 파일 받는 법",
- "size": 4870302,
- "sha1": "bdc4b1d37956f45f2b9228cb1c547d42a4c6f658",
- "sha256": "1071d62881f2df2bcb1af1e1b8d2b9da4929355f9b98e9ef4cf66fcc2e290486",
- "url": "https://github.com/kkaltoe-ssam/ssamseorap/releases/download/v6.3.1/ssamseorap.zip",
+ "ver": "6.3.6",
+ "note": "학교 설정 코드에 행사계획 · 탭을 바꿔도 창 크기는 그대로 · 라비 키우기 — 보이는 모습 그대로 · 캡처 앱 새로 · 메시지 정리 더 정확하게 · 탭 점 · 선생님들 의견 반영 — 학교 행사계획 · 수업 직전 알림 · 간식 · 반 전체 생기부 PDF를 학생마다 나눠 읽기 (6.3.1 처음 판을 받으셨다면 꼭 이 판으로)",
+ "size": 4897985,
+ "sha1": "437a4fedced72a81159d0851ab6e122c3f09d872",
+ "sha256": "522440f90c225660dfa1ed5e7eb2089b258098a58f8a70aa2680f20c6a99ea87",
+ "url": "https://github.com/kkaltoe-ssam/ssamseorap/releases/download/v6.3.6/ssamseorap.zip",
  "page": "https://claude.ai/artifact/GocNTKe6rx4ymZqYGpGX8a"
 }
