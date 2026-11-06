@@ -1,9 +1,9 @@
 {
- "ver": "6.3.9",
- "note": "Gemini(구글 AI) 연결 — 라비 대화 · 공문·메시지 정리 · 성적 분석 새 화면 · 상담 모드 · 상담 기록과 학생용 상담지 · 직접 넣은 시간표 지키기 · 학교 설정 코드를 예약판에 올리기",
- "size": 4928321,
- "sha1": "101496d71f715c1b43d055aa52abcb7259716d46",
- "sha256": "8dfe7f5dd9e38b0e95ff64f034b6d5ce6c221dda37066eb6a87a40139b1a1e05",
- "url": "https://github.com/kkaltoe-ssam/ssamseorap/releases/download/v6.3.9/ssamseorap.zip",
+ "ver": "6.3.10",
+ "note": "교과 명렬표(나이스 교과시간별출석부) → 교과 출결",
+ "size": 4930691,
+ "sha1": "b702f6fcef96d6ee96362ad3cc993ad76d20b165",
+ "sha256": "21da0c8988b7e0f050d5f3ecf402e2bda38a086b146de50aa5fef3188af77713",
+ "url": "https://github.com/kkaltoe-ssam/ssamseorap/releases/download/v6.3.10/ssamseorap.zip",
  "page": "https://claude.ai/artifact/GocNTKe6rx4ymZqYGpGX8a"
 }
