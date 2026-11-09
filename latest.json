@@ -1,9 +1,9 @@
 {
- "ver": "6.3.10",
- "note": "교과 명렬표(나이스 교과시간별출석부) → 교과 출결",
- "size": 4930691,
- "sha1": "b702f6fcef96d6ee96362ad3cc993ad76d20b165",
- "sha256": "21da0c8988b7e0f050d5f3ecf402e2bda38a086b146de50aa5fef3188af77713",
- "url": "https://github.com/kkaltoe-ssam/ssamseorap/releases/download/v6.3.10/ssamseorap.zip",
+ "ver": "6.4.1",
+ "note": "홈 도장판 띠",
+ "size": 5185890,
+ "sha1": "ba41e700b30a131cbceb6497a85cf6e9c8d98193",
+ "sha256": "6607e68ea956233dce8a678442b49463a0949c2fb42743b4f741441df32c1bca",
+ "url": "https://github.com/kkaltoe-ssam/ssamseorap/releases/download/v6.4.1/ssamseorap.zip",
  "page": "https://claude.ai/artifact/GocNTKe6rx4ymZqYGpGX8a"
 }
