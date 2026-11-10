@@ -1,9 +1,9 @@
 {
- "ver": "6.4.1",
- "note": "홈 도장판 띠",
- "size": 5185890,
- "sha1": "ba41e700b30a131cbceb6497a85cf6e9c8d98193",
- "sha256": "6607e68ea956233dce8a678442b49463a0949c2fb42743b4f741441df32c1bca",
- "url": "https://github.com/kkaltoe-ssam/ssamseorap/releases/download/v6.4.1/ssamseorap.zip",
+ "ver": "6.4.2",
+ "note": "수능 디데이 바로잡기 · Gemini 연결 실패 이유",
+ "size": 5187010,
+ "sha1": "e756c106bcf268be8a354cf8e27a3be6449eff72",
+ "sha256": "7381742a8a75e5dcb46869f7044f52031fd4f9f4e418a097ce24a5a45a829cc1",
+ "url": "https://github.com/kkaltoe-ssam/ssamseorap/releases/download/v6.4.2/ssamseorap.zip",
  "page": "https://claude.ai/artifact/GocNTKe6rx4ymZqYGpGX8a"
 }
