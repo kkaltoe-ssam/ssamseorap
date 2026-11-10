@@ -1,9 +1,9 @@
 {
- "ver": "6.4.2",
- "note": "수능 디데이 바로잡기 · Gemini 연결 실패 이유",
- "size": 5187010,
- "sha1": "e756c106bcf268be8a354cf8e27a3be6449eff72",
- "sha256": "7381742a8a75e5dcb46869f7044f52031fd4f9f4e418a097ce24a5a45a829cc1",
- "url": "https://github.com/kkaltoe-ssam/ssamseorap/releases/download/v6.4.2/ssamseorap.zip",
+ "ver": "6.4.3",
+ "note": "학교망에서 Gemini 연결",
+ "size": 5187764,
+ "sha1": "b74d08d05958487d696e0784626a06d5629a8753",
+ "sha256": "1cd6149a3a33b562e1c7d812cb5f4823a1fdabbd718364cfc4065c82e92a1f8a",
+ "url": "https://github.com/kkaltoe-ssam/ssamseorap/releases/download/v6.4.3/ssamseorap.zip",
  "page": "https://claude.ai/artifact/GocNTKe6rx4ymZqYGpGX8a"
 }
