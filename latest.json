@@ -1,9 +1,9 @@
 {
- "ver": "6.4.3",
- "note": "학교망에서 Gemini 연결",
- "size": 5187764,
- "sha1": "b74d08d05958487d696e0784626a06d5629a8753",
- "sha256": "1cd6149a3a33b562e1c7d812cb5f4823a1fdabbd718364cfc4065c82e92a1f8a",
- "url": "https://github.com/kkaltoe-ssam/ssamseorap/releases/download/v6.4.3/ssamseorap.zip",
+ "ver": "6.5.3",
+ "note": "라비 앱 옷장 탭 · 자라는 라비 새 그림",
+ "size": 13460305,
+ "sha1": "02a9e7921edbdea1cb61750949b6483e65b115c3",
+ "sha256": "6b69496c17e94dbb51f197bd5a702f4ef5d79cc8513ea677e03ddd07ea03d8cd",
+ "url": "https://github.com/kkaltoe-ssam/ssamseorap/releases/download/v6.5.3/ssamseorap.zip",
  "page": "https://claude.ai/artifact/GocNTKe6rx4ymZqYGpGX8a"
 }
