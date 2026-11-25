@@ -1,9 +1,9 @@
 {
- "ver": "6.5.3",
- "note": "라비 앱 옷장 탭 · 자라는 라비 새 그림",
- "size": 13460305,
- "sha1": "02a9e7921edbdea1cb61750949b6483e65b115c3",
- "sha256": "6b69496c17e94dbb51f197bd5a702f4ef5d79cc8513ea677e03ddd07ea03d8cd",
- "url": "https://github.com/kkaltoe-ssam/ssamseorap/releases/download/v6.5.3/ssamseorap.zip",
+ "ver": "6.5.4",
+ "note": "고치기 · 할 일 마감 · Esc로 내리기 · 우리 학교 명단 · 처음 쓰는 선생님도 쉽게",
+ "size": 13473365,
+ "sha1": "880d3afca33191af082016f740768ff65facf91d",
+ "sha256": "7a1b873acbb92681767e197fb4aab3c973760cc23e12cf493f3db6c8a770e50c",
+ "url": "https://github.com/kkaltoe-ssam/ssamseorap/releases/download/v6.5.4/ssamseorap.zip",
  "page": "https://claude.ai/artifact/GocNTKe6rx4ymZqYGpGX8a"
 }
