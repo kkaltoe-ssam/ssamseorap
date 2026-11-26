@@ -1,9 +1,9 @@
 {
- "ver": "6.5.4",
- "note": "고치기 · 할 일 마감 · Esc로 내리기 · 우리 학교 명단 · 처음 쓰는 선생님도 쉽게",
- "size": 13473365,
- "sha1": "880d3afca33191af082016f740768ff65facf91d",
- "sha256": "7a1b873acbb92681767e197fb4aab3c973760cc23e12cf493f3db6c8a770e50c",
- "url": "https://github.com/kkaltoe-ssam/ssamseorap/releases/download/v6.5.4/ssamseorap.zip",
+ "ver": "6.5.5",
+ "note": "NEIS에서 찾기 3주 비교 · 우리 학교 명단과 다른 칸 알림",
+ "size": 13474675,
+ "sha1": "6ff5d498aa28b960879fb133f89d94f37d7548a9",
+ "sha256": "3a30e304d8f16c4b891c04fc55af6fa03213dac754109bf565b6c9f6ebd7dd69",
+ "url": "https://github.com/kkaltoe-ssam/ssamseorap/releases/download/v6.5.5/ssamseorap.zip",
  "page": "https://claude.ai/artifact/GocNTKe6rx4ymZqYGpGX8a"
 }
