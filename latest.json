@@ -1,9 +1,9 @@
 {
- "ver": "6.5.5",
- "note": "NEIS에서 찾기 3주 비교 · 우리 학교 명단과 다른 칸 알림",
- "size": 13474675,
- "sha1": "6ff5d498aa28b960879fb133f89d94f37d7548a9",
- "sha256": "3a30e304d8f16c4b891c04fc55af6fa03213dac754109bf565b6c9f6ebd7dd69",
- "url": "https://github.com/kkaltoe-ssam/ssamseorap/releases/download/v6.5.5/ssamseorap.zip",
+ "ver": "6.5.7",
+ "note": "라비에게 '우리 학교 이름 + 코드'라고 말하면 학교 설정이 한 번에",
+ "size": 13479960,
+ "sha1": "45d4d7941a32369ea90776f08adc1fbe02bcc819",
+ "sha256": "7bf38e617f197cf03fddd847038db0b292a4d083ed308c34d516ee2d6eabaea3",
+ "url": "https://github.com/kkaltoe-ssam/ssamseorap/releases/download/v6.5.7/ssamseorap.zip",
  "page": "https://claude.ai/artifact/GocNTKe6rx4ymZqYGpGX8a"
 }
